@@ -1,1 +1,3 @@
-%h1 This is the post index placeholder
+- @posts.each do |post|
+    %h2= post.title
+    %p= time_ago_in_words(post.created_at)
