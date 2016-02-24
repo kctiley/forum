@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
 
   before_action :find_post, only: [:show, :edit, :update, :destroy]
+  # Devise prevents user from going to routes that are not index or show unless logged in
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @posts = Post.all.order("created_at DESC")
