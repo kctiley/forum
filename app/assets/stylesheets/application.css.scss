@@ -89,6 +89,21 @@ body {
   }
 }
 
+.buttons {
+  width: 20%;
+  float: left;
+  font-size: .8em;
+  text-align: right;
+  padding-top: 1.5em;
+  a {
+    color: #397CAC;
+    border: 1px solid #397CAC;
+    padding: .5em 1em;
+    border-radius: .2em;
+    text-decoration: none;
+  }
+}
+
 #post_content {
   background: white;
   padding: 2em 5%;
@@ -102,6 +117,42 @@ body {
   p {
     color: #B2BAC2;
     font-size: 0.9rem;
+    font-weight: 100;
+  }
+}
+
+#comments {
+  .comment {
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    .content {
+      width: 80%;
+      float: left;
+    }
+    .comment_content {
+      margin: 0;
+      padding: 0;
+    }
+    .comment_author {
+      color: #397CAC;
+      margin-top: 0.5rem;
+      font-size: 0.8em;
+      font-weight: 700;
+    }
+  }
+  textarea {
+    border: 1px solid #d1d1d1;
+    width: 100%;
+    min-height: 100px;
+    margin: 1em 0;
+    border-radius: .2em;
+  }
+  input[type='submit'] {
+    background: #397CAC;
+    border-radius: .2em;
+    border: none;
+    color: white;
     font-weight: 100;
   }
 }
