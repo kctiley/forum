@@ -3,6 +3,7 @@
 %head
   %title Flyer's Forum
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  %link{rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"}
   %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Lato:400,100,700", type:"text/css"}
   %link{rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css", type:"text/css"}
   
@@ -12,14 +13,25 @@
   %header.main_header.clearfix
     .wrapper
       #logo
+        / =image_tag "airplane_taxi.jpg"
+        %i.fa.fa-plane
         %p= link_to "Flyer's Forum", root_path
-      #buttons
-        -if user_signed_in?
+      / #buttons
+      /   -if user_signed_in?
+      /     = link_to "New Post", new_post_path 
+      /   -else
+      /     = link_to "Sign In", new_user_session_path 
+      /     = link_to "Sign Up", new_user_registration_path
+  .landing
+    #buttons
+      -if user_signed_in?
+        #sign_container
           = link_to "New Post", new_post_path 
-        -else
+      -else
+        #sign_container
           = link_to "Sign In", new_user_session_path 
           = link_to "Sign Up", new_user_registration_path
-    
+    =image_tag "airplane_taxi.jpg"
   .wrapper  
     %p.notice= notice
     %p.alert= alert

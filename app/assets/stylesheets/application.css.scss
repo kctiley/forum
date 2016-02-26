@@ -15,7 +15,9 @@
  */
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #EDEFF0;
+  /*background-image: url('sky1.jpg');*/
+  background: #81DAF5;
+  background: #FBFBEF;
 }
 
 .clearfix:before, .clearfix:after {
@@ -40,6 +42,7 @@ body {
   margin: 0 auto;
   #logo {
     float: left;
+
     a {
       text-transform: uppercase;
       font-weight: 700;
@@ -47,6 +50,16 @@ body {
       font-size: 1.2rem;
       text-decoration: none;
       color: #397CAC;
+    }
+    i {
+      color: #A4A4A4;
+      font-size: 50px;
+      padding: 0;
+    }
+    img {
+      margin-top: 10px;
+      height: 60px;
+      width: 130px;
     }
   }
   #buttons {
@@ -155,6 +168,41 @@ body {
     font-weight: 100;
   }
 }
+
+.landing {
+  postition: relative;
+  img {
+    width: 60%;
+    height: 36%;
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+  #buttons {
+      position: absolute;
+      margin-left: 27%;
+      margin-top: 20%;
+      line-height: 60px;
+      opacity: .6;
+      color: white;
+      text-decoration: none;
+      font-weight: 100;
+    #sign_container{
+      position: relative;
+      a{
+        font-size: 1.5em;
+        color: white;
+        display: inline;
+        margin: 2em;
+        background: black;
+        padding: 0.5em 1em;
+        border-radius: 0.2em;
+      }
+    }
+    
+  }
+}
+
+
 
 
 
